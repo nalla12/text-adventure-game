@@ -1,0 +1,57 @@
+[
+  {
+    "id": 1,
+    "story": "Du vågner til den høje lyd af torden. Dit hoved dunker hårdt, som om der er en lille hammer derinde. Det eneste lys du kan se, stammer fra fuldmånens genskin på havoverfladen. Du befinder dig i en lille grotte med åbning ud til havet. Du vurderer at der er ca. 5 m. hen til vandet.",
+    "question": "Hvad gør du?",
+    "choices": [
+      {
+        "text": "Læg dig til at sove i grotten.",
+        "goTo": 2
+      },
+      {
+        "text": "Gå ud af grotten.",
+        "goTo": 3
+      }
+    ]
+  },
+  {
+    "id": 2,
+    "story": "Du drukner...",
+    "question": "",
+    "choices": [
+      {
+        "text": "BUM",
+        "goTo": 1
+      },
+      {
+        "text": "BUM BUM",
+        "goTo": 3
+      }
+    ]
+  },
+  {
+    "id": 3,
+    "story": "Du udforsker området...",
+    "question": "",
+    "choices": [
+      {
+        "text": "La",
+        "goTo": 1
+      },
+      {
+        "text": "La la",
+        "goTo": 4
+      }
+    ]
+  },
+  {
+    "id": 4,
+    "story": "text",
+    "question": "",
+    "choices": [
+      "Yadda",
+      "Bla",
+      "Hahaha"
+    ]
+  }
+]

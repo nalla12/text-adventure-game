@@ -1,35 +1,29 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
+import { Subscription } from 'rxjs';
+// import { Observable } from 'rxjs';
+import { map } from 'rxjs/operators';
+// import { TextInterface } from "../interfaces/text-interface";
 
 @Injectable({
   providedIn: 'root'
 })
-export class TextService {
-  private jsonUrl = '/assets/text.json';
 
-  constructor(private http: HttpClient) { }
+export class TextService< T = any > {
+  private jsonUrl: string = '/assets/text.json';
 
-  getText() {
-    return this.http.get<{ id: number; story: string; question: string; choices: object; text: string; goTo: number; }[]>(
-      this.jsonUrl
-    );
+  constructor(private http: HttpClient) {
   }
 
-  getStory() {
-    return this.http.get<{ id: number; story: string; }[]>(
-      this.jsonUrl
-    );
-  }
-
-  getQuestion() {
-    return this.http.get<{ id: number; question: string; }[]>(
-      this.jsonUrl
-    );
-  }
-
-  getChoices() {
-    return this.http.get<{ id: number; choices: object; text: string; goTo: number; }[]>(
-      this.jsonUrl
-    );
+  public getText(next?: (value: T[]) => void): Subscription {
+    return this.http.get<T[]>(this.jsonUrl)
+      .pipe(
+        map((response: any) => {
+          const parsedResponse = response;
+          console.log(parsedResponse,response);
+          return parsedResponse;
+        })
+      )
+      .subscribe(next);
   }
 }

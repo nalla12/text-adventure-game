@@ -7,12 +7,13 @@ import { TextService } from "../services/text.service";
   styleUrls: ['./choices.component.css']
 })
 export class ChoicesComponent implements OnInit {
+  public pages?: any[];
 
   constructor(private textService: TextService) { }
 
-  ngOnInit(): void {
+  ngOnInit() {
+    this.textService.getText((text: any[]) => {
+      this.pages = text;
+    });
   }
-
-  choices = this.textService.getChoices();
-
 }

@@ -7,12 +7,14 @@ import { TextService } from "../services/text.service";
   styleUrls: ['./story.component.css']
 })
 export class StoryComponent implements OnInit {
-  public story!: string;
+
+  public story?: any[];
+
   constructor(private textService: TextService) { }
 
-  ngOnInit(): void {
+  ngOnInit() {
+    this.textService.getText((text: any[]) => {
+      this.story = text[0].story;
+    });
   }
-
-  storyId = 1;
-  storyText = this.textService.getText();
 }

@@ -1,5 +1,4 @@
-import { Component, OnInit } from '@angular/core';
-// import { TextService } from "../services/text.service";
+import {Component, EventEmitter, Input, OnInit, Output} from '@angular/core';
 
 @Component({
   selector: 'app-page',
@@ -8,9 +7,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class PageComponent implements OnInit {
 
+  @Output() onChoiceClickEvent = new EventEmitter<number>();
+  @Input() public page?: any;
+
   constructor() { }
 
-  ngOnInit(): void {
+  ngOnInit() {
+
   }
 
 }

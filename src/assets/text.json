@@ -49,9 +49,14 @@
     "story": "text",
     "question": "",
     "choices": [
-      "Yadda",
-      "Bla",
-      "Hahaha"
+      {
+        "text": "La",
+        "goTo": 1
+      },
+      {
+        "text": "La la",
+        "goTo": 4
+      }
     ]
   }
 ]

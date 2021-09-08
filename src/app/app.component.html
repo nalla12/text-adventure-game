@@ -1,7 +1,11 @@
 <div class="content" role="main">
+  <h2>Text Adventure Game</h2>
 
-  <app-page></app-page>
-
+  <ng-container *ngFor="let page of pages">
+    <app-page *ngIf="page.id == currentPageId"
+              (onChoiceClickEvent)="updateCurrentPageId($event)"
+              [page]="page"></app-page>
+  </ng-container>
 
   <svg id="clouds" xmlns="http://www.w3.org/2000/svg" width="2611.084" height="485.677" viewBox="0 0 2611.084 485.677">
     <title>Gray Clouds Background</title>

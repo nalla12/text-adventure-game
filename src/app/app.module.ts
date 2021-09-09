@@ -5,11 +5,13 @@ import { RouterModule } from '@angular/router';
 
 import { AppComponent } from './app.component';
 import { PageComponent } from './page/page.component';
+import { ChoicesComponent } from './choices/choices.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     PageComponent,
+    ChoicesComponent,
   ],
   imports: [
     BrowserModule,

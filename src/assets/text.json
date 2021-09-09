@@ -1,7 +1,18 @@
 [
   {
+    "id": 0,
+    "story": "GAME OVER",
+    "question": "Du er død",
+    "choices": [
+      {
+        "text": "Start forfra",
+        "goTo": 1
+      }
+    ]
+  },
+  {
     "id": 1,
-    "story": "Du vågner til den høje lyd af torden. Dit hoved dunker hårdt, som om der er en lille hammer derinde. Det eneste lys du kan se, stammer fra fuldmånens genskin på havoverfladen. Du befinder dig i en lille grotte med åbning ud til havet. Du vurderer at der er ca. 5 m. hen til vandet.",
+    "story": "Du vågner til den høje lyd af torden. Dit hoved dunker hårdt, som om der er en lille hammer derinde. Det eneste lys du kan se, stammer fra fuldmånens genskin på havoverfladen. Du befinder dig i en lille grotte med åbning ud til havet, ikke langt fra vandet.",
     "question": "Hvad gør du?",
     "choices": [
       {
@@ -16,12 +27,12 @@
   },
   {
     "id": 2,
-    "story": "Du drukner...",
+    "story": "Du lukker øjnene og prøver at huske på, hvordan du er havnet her. Der går dog ikke lang tid før du falder i søvn, for din krop føles som om du har været i slåskamp med en bjørn.",
     "question": "",
     "choices": [
       {
         "text": "BUM",
-        "goTo": 1
+        "goTo": 0
       },
       {
         "text": "BUM BUM",
@@ -31,7 +42,7 @@
   },
   {
     "id": 3,
-    "story": "Du udforsker området...",
+    "story": "Du går langsomt ud af grotten og udforsker området.",
     "question": "",
     "choices": [
       {
@@ -41,6 +52,10 @@
       {
         "text": "La la",
         "goTo": 4
+      },
+      {
+        "text": "La?",
+        "goTo": 0
       }
     ]
   },
@@ -51,11 +66,19 @@
     "choices": [
       {
         "text": "La",
-        "goTo": 1
+        "goTo": 0
       },
       {
         "text": "La la",
         "goTo": 4
+      },
+      {
+        "text": "La",
+        "goTo": 1
+      },
+      {
+        "text": "La la",
+        "goTo": 3
       }
     ]
   }

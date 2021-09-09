@@ -1,7 +1,8 @@
 :host, body {
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
   font-size: 14px;
-  color: #333;
+  color: #eeeeee;
+  background: #032431;
   box-sizing: border-box;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -18,6 +19,10 @@ h6 {
 
 p {
   margin: 0;
+}
+
+p.story-text {
+  max-width: 75ch;
 }
 
 .spacer {
@@ -148,6 +153,10 @@ a:hover {
   color: #125699;
 }
 
+a.card {
+  color: #032431;
+}
+
 footer {
   margin-top: 8px;
   display: flex;
@@ -185,16 +194,7 @@ svg#clouds {
   .card.highlight-card span {
     margin-left: 72px;
   }
-
-  svg#rocket-smoke {
-    right: 120px;
-    transform: rotate(-5deg);
-  }
 }
 
 @media screen and (max-width: 575px) {
-  svg#rocket-smoke {
-    display: none;
-    visibility: hidden;
-  }
 }

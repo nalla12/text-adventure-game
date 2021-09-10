@@ -2,8 +2,10 @@
   <h2 *ngIf="currentPageId == 1">Text Adventure Game</h2>
 
   <ng-container *ngFor="let page of pages">
-    <app-page *ngIf="page.id == currentPageId"
+    <app-page id="page-{{currentPageId}}"
+              *ngIf="page.id == currentPageId"
               (onChoiceClickEvent)="updateCurrentPageId($event)"
+              (damageEvent)="updateCurrentHealth($event)"
               [page]="page">
     </app-page>
   </ng-container>

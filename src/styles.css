@@ -1,6 +1,6 @@
 :host, body {
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
-  font-size: 14px;
+  font-size: 1rem;
   color: #eeeeee;
   background: #032431;
   box-sizing: border-box;
@@ -23,6 +23,19 @@ p {
 
 p.story-text {
   max-width: 75ch;
+}
+
+/* Game Over text */
+#page-0 .story-text {
+  font-size: 4rem;
+  font-weight: bold;
+  text-align: center;
+}
+
+/* Choice buttons */
+app-choices a {
+  font-size: 1rem;
+  text-align: center;
 }
 
 .spacer {

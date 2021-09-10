@@ -7,11 +7,20 @@ import {Component, EventEmitter, Input, OnInit, Output} from '@angular/core';
 })
 export class PageComponent implements OnInit {
 
+  private damage: number = 0;
+  @Output() damageEvent = new EventEmitter<number>();
   @Output() onChoiceClickEvent = new EventEmitter<number>();
   @Input() public page?: any;
 
   constructor() { }
 
-  ngOnInit() { }
+  ngOnInit() {
+    this.damage = this.page.damage;
+
+    if(this.damage) {
+      console.log("Damage: " + this.damage);
+      this.damageEvent.emit(this.damage);
+    }
+  }
 
 }

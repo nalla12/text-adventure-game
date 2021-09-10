@@ -3,6 +3,7 @@
     "id": 0,
     "story": "GAME OVER",
     "question": "Du er død",
+    "damage": "100",
     "choices": [
       {
         "text": "Start forfra",
@@ -14,6 +15,7 @@
     "id": 1,
     "story": "Du vågner til den høje lyd af torden. Dit hoved dunker hårdt, som om der er en lille hammer derinde. Det eneste lys du kan se, stammer fra fuldmånens genskin på havoverfladen. Du befinder dig i en lille grotte med åbning ud til havet, ikke langt fra vandet.",
     "question": "Hvad gør du?",
+    "damage": "",
     "choices": [
       {
         "text": "Læg dig til at sove i grotten.",
@@ -29,6 +31,7 @@
     "id": 2,
     "story": "Du lukker øjnene og prøver at huske på, hvordan du er havnet her. Der går dog ikke lang tid før du falder i søvn, for din krop føles som om du har været i slåskamp med en bjørn.",
     "question": "",
+    "damage": "",
     "choices": [
       {
         "text": "BUM",
@@ -36,7 +39,7 @@
       },
       {
         "text": "BUM BUM",
-        "goTo": 3
+        "goTo": 1
       }
     ]
   },
@@ -44,41 +47,63 @@
     "id": 3,
     "story": "Du går langsomt ud af grotten og udforsker området.",
     "question": "",
+    "damage": "",
     "choices": [
       {
-        "text": "La",
-        "goTo": 1
-      },
-      {
-        "text": "La la",
+        "text": "Gå mod højre",
         "goTo": 4
       },
       {
-        "text": "La?",
-        "goTo": 0
+        "text": "Gå mod venstre",
+        "goTo": 1
       }
     ]
   },
   {
     "id": 4,
-    "story": "text",
+    "story": "Du hører lyden af tung vejrtrækning fra venstre side og vender dig straks imod lyden. En stor sort bjørn stirrer på dig med endnu sortere øjne. Den er ca. 5 meter fra dig.",
     "question": "",
+    "damage": "",
     "choices": [
       {
-        "text": "La",
-        "goTo": 0
+        "text": "Løb væk så hurtigt du kan",
+        "goTo": 5
       },
       {
-        "text": "La la",
-        "goTo": 4
+        "text": "Læg dig ned og spil død",
+        "goTo": 6
       },
       {
-        "text": "La",
+        "text": "Bliv stående på stedet og gør ingenting",
         "goTo": 1
       },
       {
-        "text": "La la",
-        "goTo": 3
+        "text": "Kig rundt og led efter et våben",
+        "goTo": 1
+      }
+    ]
+  },
+  {
+    "id": 5,
+    "story": "Du sprinter afsted hurtigere end nogensinde før. Bjørnen brøler højt og du hører tunge hastige skridt bag dig. Pludselig rammer din ene fod en stor rod og du styrter til jorden. Du prøver at rejse dig, men din fod er i stor smerte. Bjørnen har nu indhentet dig og hamrer sin pote ned på din ryg. Du skriger i smerte, mens bjørnen flænser dig med sine kløer.",
+    "question": "",
+    "damage": "100",
+    "choices": [
+      {
+        "text": "Start forfra",
+        "goTo": 1
+      }
+    ]
+  },
+  {
+    "id": 6,
+    "story": "Du lægger dig stille og roligt ned på jorden og ligger helt stille som var du død. Bjørnen går langsomt hen til dig. Du kan mærke dens fugtige varme ånde på dit ansigt. Bjørnen træder på dit højre knæ",
+    "question": "",
+    "damage": "30",
+    "choices": [
+      {
+        "text": "Videre",
+        "goTo": 1
       }
     ]
   }

@@ -1,7 +1,5 @@
 <p class="story-text" *ngIf="page">
   <span>{{ page.story }}</span>
 </p>
-
 <br>
-
 <app-choices (onChoiceClickEvent)="onChoiceClickEvent.emit($event)" [choices]="page.choices"></app-choices>

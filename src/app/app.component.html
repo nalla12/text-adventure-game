@@ -5,10 +5,15 @@
     <app-page id="page-{{currentPageId}}"
               *ngIf="page.id == currentPageId"
               (onChoiceClickEvent)="updateCurrentPageId($event)"
-              (damageEvent)="updateCurrentHealth($event)"
+              [enableChoices]="!isGameOver"
               [page]="page">
     </app-page>
   </ng-container>
+
+  <span class="game-over" *ngIf="isGameOver">
+    GAME OVER!
+    <button (click)="reset()">Start forfra</button>
+  </span>
 
   <svg id="clouds" xmlns="http://www.w3.org/2000/svg" width="2611.084" height="485.677" viewBox="0 0 2611.084 485.677">
     <title>Gray Clouds Background</title>

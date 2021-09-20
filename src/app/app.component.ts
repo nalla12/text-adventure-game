@@ -11,6 +11,7 @@ export class AppComponent implements OnInit {
 
   public currentPageId: number = 0;
   public pages?: any[];
+  public isGameOver = false;
 
   constructor(private textService: TextService, private healthService: HealthService) {
     this.updateCurrentPageId(1);
@@ -20,21 +21,21 @@ export class AppComponent implements OnInit {
     this.textService.getText((value: any[]) => {
       this.pages = value;
     });
+
+    this.healthService.onHpUpdateEvent.subscribe(hp => {
+      if (this.healthService.Hp <= 0) {
+        this.isGameOver = true;
+      }
+    });
   }
 
   public updateCurrentPageId(pageId: number) {
     this.currentPageId = pageId;
-
-    if(this.currentPageId == 1) {
-      this.healthService.resetHp();
-      console.log('Page ID: ' + this.currentPageId + ', HP: ' + this.healthService.Hp);
-    }
   }
 
-  public updateCurrentHealth(damage: number) {
-    if(damage) {
-      this.healthService.calcHp(damage);
-    }
-    console.log("Current HP:" + this.healthService.Hp);
+  public reset() {
+    this.healthService.resetHp();
+    this.currentPageId = 1;
+    this.isGameOver = false;
   }
 }

@@ -37,18 +37,14 @@
     "healing": "",
     "choices": [
       {
-        "text": "BUM",
+        "text": "Start forfra",
         "goTo": 0
-      },
-      {
-        "text": "BUM BUM",
-        "goTo": 1
       }
     ]
   },
   {
     "id": 3,
-    "story": "Du bevæger dig langsomt ud af grotten og udforsker området. Du bliver mødt med en sti, der splitter i to. Vejen til højre kan du ane vil føre dig ind mod en mørk jungle med høje træer og buske. Vejen til venstre virker mere åben og ligetil godt belyst af månen.",
+    "story": "Du bevæger dig langsomt ud af grotten og udforsker området. Du bliver mødt af en sti, der splitter i to. Vejen til højre kan du se vil føre dig ind mod en mørk jungle med høje træer og buske. Vejen til venstre virker mere åben, ligetil og godt belyst af månen.",
     "question": "Hvilken sti vælger du?",
     "damage": "",
     "healing": "",
@@ -103,7 +99,7 @@
   },
   {
     "id": 6,
-    "story": "Du lægger dig stille og roligt ned på jorden og ligger helt stille som var du død. Bjørnen går langsomt hen til dig. Du kan mærke dens fugtige varme ånde på dit ansigt. Bjørnen træder på dit højre knæ",
+    "story": "Du lægger dig stille og roligt ned på jorden og ligger helt stille som var du død. Bjørnen går langsomt hen til dig. Du kan mærke dens fugtige varme ånde på dit ansigt. Bjørnen sætter kløerne i dit højre ben, og du bider tænderne hårdt sammen for ikke at skrige af smerte. Den opserverer dig lidt og går så sin vej. Du bliver ligende i flere minutter inden du tør åbne øjnene og sætte dig op.",
     "question": "",
     "damage": 30,
     "healing": "",
@@ -113,14 +109,14 @@
         "goTo": 1
       },
       {
-        "text": "Healing",
+        "text": "Find noget til at hele dit sår",
         "goTo": 7
       }
     ]
   },
   {
     "id": 7,
-    "story": "Du finder noget bandage som du bruger til at forbinde dine sår",
+    "story": "Du finder et kæmpe spindelvæv som du bruger som forbinding til at forbinde dine sår.",
     "healing": "40",
     "choices": [
       {

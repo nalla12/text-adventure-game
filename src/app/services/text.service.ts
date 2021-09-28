@@ -8,7 +8,7 @@ import { map } from 'rxjs/operators';
 })
 
 export class TextService< T = any > {
-  private jsonUrl: string = '../assets/text.json';
+  private jsonUrl: string = '../../assets/text.json';
 
   constructor(private http: HttpClient) {
   }

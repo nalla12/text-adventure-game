@@ -156,17 +156,12 @@ footer a {
   align-items: center;
 }
 
-svg#clouds {
-  position: fixed;
-  bottom: -160px;
-  left: -230px;
-  z-index: -10;
-  width: 1920px;
-}
-
-
 /* Responsive Styles */
 @media screen and (max-width: 767px) {
+
+  a.card {
+    width: auto;
+  }
 
   .card-container > *:not(.circle-link) ,
   .terminal {

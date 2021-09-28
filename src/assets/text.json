@@ -33,12 +33,12 @@
     "id": 2,
     "story": "Du lukker øjnene og prøver at huske på, hvordan du er havnet her. Der går dog ikke lang tid før du falder i søvn, for din krop føles som om du har været i slåskamp med en bjørn.",
     "question": "",
-    "damage": "",
+    "damage": "100",
     "healing": "",
     "choices": [
       {
         "text": "Start forfra",
-        "goTo": 0
+        "goTo": 1
       }
     ]
   },

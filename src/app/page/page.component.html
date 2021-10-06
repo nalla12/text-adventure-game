@@ -1,6 +1,19 @@
 <p class="story-text" *ngIf="page">
   <span>{{ page.story }}</span>
 </p>
+
+<p *ngIf="damage">
+  <br>
+  <span>Du har lige mistet {{ damage }} HP. </span>
+  <span>Dit HP er nu: {{ healthService.Hp }}</span>
+</p>
+
+<p *ngIf="healing">
+  <br>
+  <span>Du er lige blevet helbredt {{ healing }} HP. </span>
+  <span>Dit HP er nu: {{ healthService.Hp }}</span>
+</p>
+
 <br>
 <app-choices
   *ngIf="enableChoices"

@@ -8,13 +8,13 @@ import {HealthService} from "../services/health.service";
 })
 export class PageComponent implements OnInit {
 
-  private damage?: number;
-  private healing?: number;
+  public damage?: number;
+  public healing?: number;
   @Output() onChoiceClickEvent = new EventEmitter<number>();
   @Input() public page?: any;
   @Input() public enableChoices?: boolean;
 
-  constructor(private healthService: HealthService) { }
+  constructor(public healthService: HealthService) { }
 
   ngOnInit() {
     this.damage = this.page.damage;
